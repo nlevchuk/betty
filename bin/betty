@@ -1,0 +1,5 @@
+#!/bin/bash
+
+SCRIPT_FILE=./cli.ts
+
+bun $SCRIPT_FILE $@
