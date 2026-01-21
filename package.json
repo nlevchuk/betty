@@ -1,11 +1,10 @@
 {
   "name": "betty",
   "version": "0.0.1",
-  "module": "index.ts",
+  "module": "cli.ts",
   "type": "module",
   "author": "Nikita Levchuk <code@levch.uk>",
   "license": "MIT",
-  "packageManager": "pnpm@10.12.4",
   "devDependencies": {
     "@types/node": "^25.0.9"
   },
