@@ -1,5 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
-SCRIPT_FILE=./cli.ts
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$SCRIPT_DIR/.."
 
-bun $SCRIPT_FILE $@
+bun --env-file="$PROJECT_ROOT/.env" "$PROJECT_ROOT/cli.ts" "$@"
