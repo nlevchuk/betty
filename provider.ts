@@ -2,11 +2,11 @@ import { OpenAI } from 'openai'
 
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
-export async function execute(input: string, prompt: string): Promise<void> {
+export async function execute(input: string, instructions: string): Promise<void> {
   const stream = client.responses.stream({
     model: process.env.OPENAI_MODEL,
     input: [
-      { role: 'system', content: prompt },
+      { role: 'system', content: instructions },
       { role: 'user', content: input },
     ],
   })

@@ -1,4 +1,4 @@
-import { readPrompt } from './prompt'
+import { readInstructions } from './instructions'
 import { execute } from './provider'
 
 const parseMainArg = (): string => {
@@ -6,6 +6,6 @@ const parseMainArg = (): string => {
   return args.join(' ');
 }
 
-const prompt = readPrompt();
+const instructions = readInstructions();
 const input = parseMainArg();
-await execute(input, prompt);
+await execute(input, instructions);
